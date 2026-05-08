@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Capsule</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="cloud cloud1"></div>
+<div class="cloud cloud2"></div>
+<div class="container">
+
+    <form id="capsuleForm" class="form">
+
+        <h2>Create Memory Capsule</h2>
+
+        <input
+            type="text"
+            id="title"
+            placeholder="Capsule Title"
+            required
+        >
+
+        <textarea
+            id="message"
+            placeholder="Write your memory..."
+            rows="5"
+        ></textarea>
+
+        <input type="file" id="media">
+
+        <label>Unlock Date</label>
+
+        <input
+            type="datetime-local"
+            id="unlock_date"
+            required
+        >
+
+        <select id="visibility">
+
+            <option value="private">
+                Private
+            </option>
+
+            <option value="public">
+                Public
+            </option>
+
+        </select>
+
+        <button type="submit">
+            Create Capsule
+        </button>
+
+    </form>
+
+</div>
+
+<script src="js/create.js"></script>
+
+</body>
+</html>
