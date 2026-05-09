@@ -1,3 +1,4 @@
+console.log("AUTH JS LOADED");
 const API = "http://localhost:5000/api/auth";
 
 
