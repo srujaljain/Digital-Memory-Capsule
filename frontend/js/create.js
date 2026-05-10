@@ -59,7 +59,7 @@ form.addEventListener("submit", async(e)=>{
     try{
 
         const res = await fetch(
-            "http://localhost:5000/api/capsules/create",
+            "http://localhost:8000/api/capsules/create",
             {
                 method:"POST",
                 body:formData

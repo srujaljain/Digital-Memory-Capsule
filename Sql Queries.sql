@@ -1,0 +1,3 @@
+SHOW TABLES;
+SELECT * FROM users;
+SELECT * FROM capsules;

@@ -1,18 +1,15 @@
 const express = require("express");
 const cors = require("cors");
 
-const db = require("./db");
-
 const authRoutes = require("./routes/authRoutes");
-
 const capsuleRoutes = require("./routes/capsuleRoutes");
 
 const app = express();
 
+
+// MIDDLEWARE
 app.use(cors());
-
 app.use(express.json());
-
 app.use("/uploads", express.static("uploads"));
 
 
@@ -22,10 +19,13 @@ app.use("/api/auth", authRoutes);
 app.use("/api/capsules", capsuleRoutes);
 
 
+// TEST
 app.get("/", (req, res) => {
-    res.send("Memory Capsule API Running");
+    res.send("Backend Working");
 });
 
-app.listen(5000, () => {
-    console.log("Server running on port 5000");
+
+// SERVER
+app.listen(8000, () => {
+    console.log("Server running on port 8000");
 });

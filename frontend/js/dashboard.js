@@ -44,7 +44,7 @@ function createConfetti(){
 
         setTimeout(()=>{
             confetti.remove();
-        },5000);
+        },8000);
 
     }
 
@@ -56,7 +56,7 @@ function createConfetti(){
 async function loadCapsules(){
 
     const res = await fetch(
-        `http://localhost:5000/api/capsules/${user.id}`
+        `http://localhost:8000/api/capsules/${user.id}`
     );
 
     const capsules = await res.json();
@@ -152,13 +152,13 @@ async function loadCapsules(){
                             `
                             <video controls>
                                 <source
-                                src="http://localhost:5000/uploads/${capsule.media}">
+                                src="http://localhost:8000/uploads/${capsule.media}">
                             </video>
                             `
                             :
                             `
                             <img
-                            src="http://localhost:5000/uploads/${capsule.media}">
+                            src="http://localhost:8000/uploads/${capsule.media}">
                             `
                             :
                             ""
