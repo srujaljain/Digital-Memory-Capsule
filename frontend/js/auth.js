@@ -10,11 +10,14 @@ if(registerForm){
 
         e.preventDefault();
 
-        const username = document.getElementById("username").value;
+        const username =
+            document.getElementById("username").value;
 
-        const email = document.getElementById("email").value;
+        const email =
+            document.getElementById("email").value;
 
-        const password = document.getElementById("password").value;
+        const password =
+            document.getElementById("password").value;
 
 
         const res = await fetch(`${API}/register`,{
@@ -54,9 +57,11 @@ if(loginForm){
 
         e.preventDefault();
 
-        const email = document.getElementById("loginEmail").value;
+        const email =
+            document.getElementById("loginEmail").value;
 
-        const password = document.getElementById("loginPassword").value;
+        const password =
+            document.getElementById("loginPassword").value;
 
 
         const res = await fetch(`${API}/login`,{
@@ -78,12 +83,18 @@ if(loginForm){
 
         alert(data.message);
 
-        // Save token
-        localStorage.setItem("token", data.token);
+        localStorage.setItem(
+            "token",
+            data.token
+        );
 
-        localStorage.setItem("user", JSON.stringify(data.user));
+        localStorage.setItem(
+            "user",
+            JSON.stringify(data.user)
+        );
 
-        window.location.href = "dashboard.html";
+        window.location.href =
+            "dashboard.html";
 
     });
 
